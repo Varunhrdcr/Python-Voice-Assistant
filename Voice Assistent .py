@@ -36,6 +36,10 @@ def run_alexa():
         song=command.replace('play','')
         talk('Playing' + song)
         pywhatkit.playonyt(song)
+    elif 'show' in command:
+        song=command.replace('show','')
+        talk('Showing' + song)
+        pywhatkit.playonyt(song)
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         print(time)
